@@ -10,7 +10,7 @@ namespace ExemploExplorando.Models
         public Pessoa(string nome, string sobrenome){
 
             Nome = nome;
-            Sobrenome = sobrenome;
+            Sobrenome = sobrenome.ToUpper();
 
         }
 
