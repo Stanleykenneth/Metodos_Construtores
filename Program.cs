@@ -1,9 +1,25 @@
 ﻿using ExemploExplorando.Models;
 using System.Globalization;
 
-DateTime data = DateTime.Now; // Retorna a Data atual do sistema
-Console.WriteLine(data);
-Console.WriteLine(data.ToString("dd/MM/yy HH:mm"));
+string dataString = "2023-13-25 11:30";
+
+ bool sucesso = DateTime.TryParseExact(dataString, "yyyy-MM-dd HH:mm", CultureInfo.InvariantCulture, DateTimeStyles.None, out DateTime data);
+
+if(sucesso){
+
+    Console.WriteLine($"Conversão com sucesso! Data: {data}");
+}
+else{
+    Console.WriteLine($"{dataString} não é uma data válida");
+}
+
+
+
+// DateTime data = DateTime.Now; // Retorna a Data atual do sistema
+// Console.WriteLine(data);
+// Console.WriteLine(data.ToString("dd/MM/yy HH:mm"));
+// Console.WriteLine(data.ToShortDateString()); // Só imprime a data 
+// Console.WriteLine(data.ToShortTimeString()); // Só imprime a hora 
 
 
 
