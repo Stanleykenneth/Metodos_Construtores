@@ -1,13 +1,43 @@
 ﻿using ExemploExplorando.Models;
+using System.Globalization;
 
-// FORMATANDO VALORES MONETÁRIOS
-
-decimal valorMonetario = 82.40M;
-
-Console.WriteLine($"{valorMonetario:C}");
-
+DateTime data = DateTime.Now; // Retorna a Data atual do sistema
+Console.WriteLine(data);
+Console.WriteLine(data.ToString("dd/MM/yy HH:mm"));
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// // FORMATANDO VALORES MONETÁRIOS
+
+// CultureInfo.DefaultThreadCurrentCulture = new CultureInfo("pt-BR");
+
+// decimal valorMonetario = 82.40M;
+
+// Console.WriteLine($"{valorMonetario:C}");
+
+// // FORMATANDO PORCENTAGEM
+
+// double porcentagem = .3421;
+// Console.WriteLine(porcentagem.ToString("P"));
+// Console.WriteLine($"{porcentagem:P}");
+
+// // TRABALHANDO COM DIGITOS EM
+
+// int numero = 123456;
+// Console.WriteLine(numero.ToString("##-##-##"));
 
 
 
